@@ -1,0 +1,13 @@
+[package]
+name = "cockpitd"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+serde = "1"
+toml = "0.8"
+tarpc = { version = "0.34", features = ["tokio1"] }
+tokio = { version = "1", features = ["rt-multi-thread", "macros"] }
+rwcommon = { version = "0.1", path = "../rwcommon", features = ["serde_derive"] }
